@@ -1,0 +1,42 @@
+<div class="cart">
+  <h1>FORM BY LS</h1>
+  <div>
+    <label for="">Nombre: </label>
+    <input type="text" (keyup)="addValue1($event)" [value] = name>
+  </div>
+  <div>
+    <label for="">Apellido: </label>
+    <input type="text" (keyup)="addValue2($event)" [value] = lastName>
+  </div>
+  <div>
+    <label for="">Email: </label>
+    <input type="text" (keyup)="addValue3($event)" [value] = email>
+  </div>
+  <div>
+    <label for="">Número de Celular: </label>
+    <input type="text" (keyup)="addValue4($event)" [value] = cel>
+  </div>
+  <div>
+    <label for="">País: </label>
+    <input type="text" (keyup)="addValue5($event)" [value] = country>
+  </div>
+  <div>
+    <label for="">Ciudad: </label>
+    <input type="text" (keyup)="addValue6($event)" [value] = city>
+  </div>
+  <div>
+    <!-- <button type="submit" (click)="view()">Enviar</button> -->
+    <button type="button" (click)="clear()" >Limpiar</button>
+  </div>
+</div>
+
+<div>
+  <p>{{ name }}</p>
+  <p>{{ lastName }}</p>
+  <p>{{ email }}</p>
+  <p>{{ cel }}</p>
+  <p>{{ country }}</p>
+  <p>{{ city }}</p>
+</div>
+
+<router-outlet></router-outlet>
