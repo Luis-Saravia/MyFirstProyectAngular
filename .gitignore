@@ -10,6 +10,8 @@ firebase.json
 
 # Node
 /node_modules
+.env
+.npmrc
 npm-debug.log
 yarn-error.log
 
