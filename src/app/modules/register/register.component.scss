@@ -5,4 +5,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h1 {
+    font-weight: 500 
+  }
+
+  mat-form-field {
+    width: 450px;
+  }
 }
