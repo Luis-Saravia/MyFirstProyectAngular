@@ -3,14 +3,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Form } from './register.interface';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
 })
-export class LoginComponent {
+export class RegisterComponent {
   title = 'Angular-form';
 
-  loginForm: FormGroup<Form> = new FormGroup({
+  constructor(){}
+
+  registerForm: FormGroup<Form> = new FormGroup({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -20,8 +22,10 @@ export class LoginComponent {
   })
 
   onSubmit(){
-    if(this.loginForm.valid) {
-      console.log('Valores del Formulario', this.loginForm.value)
+    if(this.registerForm.valid) {
+      console.log('Valores del Formulario', this.registerForm.value)
+    } else {
+      console.log('Los valores no se pueden imprimir, faltan valores o llenar correctamente las entradas')
     }
   }
 }
